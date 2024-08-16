@@ -1,9 +1,9 @@
 <!-- Property binding: kỹ thuật truyền giá trị từ component vào thuộc tính của 1 phần tử html -->
 <div>
     <button (click)="onChangeUser()">
-        <img [src]="avatar" 
+        <img [src]="imagePath" 
             [alt]=""
         />
-        <span>{{ name }}</span>
+        <span>{{ user.name }}</span>
     </button>
 </div>
