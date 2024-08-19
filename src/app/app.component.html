@@ -5,10 +5,16 @@
         <li *ngFor="let item of users">
             <app-user [user]="item"
             (select)="onSelect($event)"
+            [isSelected]="item.id === selectId"
             >
             </app-user>
         </li>
     </ul>
 
-    <app-task [name]="selectedUser?.name"></app-task>
+    <ng-container *ngIf="selectedUser; else notSelectUser">
+        <app-tasks [name]="selectedUser.name" [userId]="selectedUser.id"></app-tasks>
+    </ng-container>
+    <ng-template #notSelectUser>
+        <p>Select an user</p>
+    </ng-template>
 </main>

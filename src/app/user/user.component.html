@@ -1,6 +1,8 @@
 <!-- Property binding: kỹ thuật truyền giá trị từ component vào thuộc tính của 1 phần tử html -->
 <div>
-    <button (click)="onChangeUser()">
+    <button (click)="onChangeUser()" 
+        [class.active]="isSelected"
+    >
         <img [src]="imagePath" 
             [alt]=""
         />

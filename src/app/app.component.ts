@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'maxi-app';
   users = DUMMY_USERS;
   selectId = '';
+  isSelected = false;
 
   onSelect(id: string) {
     this.selectId = id;
