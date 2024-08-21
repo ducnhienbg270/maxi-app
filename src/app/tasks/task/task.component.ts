@@ -14,7 +14,4 @@ export class TaskComponent {
     this.taskIdCompleted.emit(this.itemTask?.id);
   }
 
-  onCancelAddTask() {
-    this
-  }
 }
